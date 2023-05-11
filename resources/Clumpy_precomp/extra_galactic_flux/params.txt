@@ -1,0 +1,78 @@
+# Variable name                         Unit           Set to value   What is this?
+
+gCOSMO_HUBBLE                           [-]            0.678          Reduced dimensionless Hubble parameter
+gCOSMO_OMEGA0_M                         [-]            0.308          Dark and Baryonic Mass Omega0_mass
+gCOSMO_OMEGA0_B                         [-]            0.0486         Baryonic Mass Omega0_baryon
+gCOSMO_T0                               [K]            2.7255         Present-day CMB photon temperature
+gCOSMO_SIGMA8                           [-]            0.815          Fluctuation amplitude at 8 Mpc h^-1
+gCOSMO_N_S                              [-]            0.968          Scalar spectral index of primord. perturbations
+gCOSMO_TAU_REIO                         [-]            0.066          Reionization optical depth
+gSIM_EXTRAGAL_FLAG_WINDOWFUNC           [-]            kTOP_HAT       Spherical collapse model window function
+gDM_RHOHALOES_TO_RHOMEAN                [-]            1              Max. fraction rho_m bound into DM halos
+gSIM_EXTRAGAL_MF_SIGMA_CUTOFF           [-]            0.2            Smoothness of the mass function cut-off
+gDM_KMAX_SIGMA_CUTOFF                   [-]            0.5            Smoothness of the P(k) cut-off
+gSIM_EXTRAGAL_KMAX_PRECOMP              [h/Mpc]        1000000000000  k_max/h of computed CDM power spectrum
+gSIM_EXTRAGAL_IS_DELTA_HMF_FROM_PROFILE [-]            0              Calculate HMF from defined halo profile shape
+gSIM_EXTRAGAL_NM_PRECOMP                [-]            1000           Number of points for HMF grid
+gSIM_EXTRAGAL_DELTAZ_PRECOMP            [-]            0.1            Delta z for precomputed P(k,z) at various z 
+gSIM_EXTRAGAL_IS_MLOG                   [-]            1              Plot/integrate mass values in log-space
+gSIM_EXTRAGAL_FLAG_GROWTHFACTOR         [-]            kHEATH77       Method to compute lin. dens. perturb growth fac.
+
+
+# Variable name                         Unit           Standard Value    (Format)          (Comment)
+
+gSIM_EPS                                [-]            0.01              <float>           Numeric precision of the simulation
+gSIM_OUTPUT_DIR                         [-]            output_ann/     <string or -1>    Output directory (absolute or relative)
+gSIM_IS_WRITE_ROOTFILES                 [-]            1                 <boolean (0/1)>   Write output additionally in ROOT format
+gSIM_EXTRAGAL_ZMIN                      [-]            0                 <float>           Minimum redshift (for plot/integration)
+gSIM_EXTRAGAL_ZMAX                      [-]            100               <float>           Maximum redshift (for plot/integration)
+gSIM_EXTRAGAL_EBL_UNCERTAINTY           [-]            0                 <double>          Systematic uncertainty on EBL extinction tau
+gSIM_XPOWER                             [-]            2                 <float>           Multiply dependent variable with power of x val
+gSIM_FLUX_EMIN_GEV                      [GeV]          1                 <float>           Lower limit for integrated flux & shown spectrum
+gSIM_FLUX_EMAX_GEV                      [GeV]          500               <float>           Upper limit for integrated flux & shown spectrum
+gSIM_NX                                 [-]            40                <integer>         # of points at which 1D calculation is done
+gSIM_IS_XLOG                            [-]            True              <boolean>         If True, evaluate and plot points in x-axis log-scale
+
+gPP_DM_IS_ANNIHIL_OR_DECAY              [-]            1                 <boolean (0/1)>   Dark Matter Model (0: Decay, 1: Annihilation)
+gPP_DM_MASS_GEV                         [GeV]          500               <float>           [GeV] dark matter particle mass
+gPP_FLAG_SPECTRUMMODEL                  [-]            kCIRELLI11_EW     <string>          Spectrum model
+gSIM_FLUX_FLAG_FINALSTATE               [-]            kNEUTRINO         <string>          Considered final state particle
+gPP_NUMIXING_THETA12_DEG                [deg]          34                <float>           Neutrino mixing angle 1
+gPP_NUMIXING_THETA13_DEG                [deg]          9                 <float>           Neutrino mixing angle 2
+gPP_NUMIXING_THETA23_DEG                [deg]          41                <float>           Neutrino mixing angle 3
+gSIM_FLUX_FLAG_NUFLAVOUR                [-]            kNUMU             <string>          Considered neutrino flavour
+
+gPP_DM_ANNIHIL_SIGMAV_CM3PERS           [cm^3/s]       1e-24             <float>           Annihilation cross section
+gPP_DM_ANNIHIL_DELTA                    [-]            2                 <integer>         Majorana (2) or Dirac (4) particle
+gPP_DM_DECAY_LIFETIME_S                 [s]            1e23              <float>           Decay lifetime
+gSIM_EXTRAGAL_MMIN                      [Msol]         1e+10             <float>           Minimum mass for extragalactic mass function
+gSIM_EXTRAGAL_MMAX                      [Msol]         1e+16             <float>           Maximum mass for extragalactic mass function
+gDM_RHOSAT                              [Msol/kpc^3]   1e+19             <float>           Dark Matter saturation density
+gDM_SUBS_NUMBEROFLEVELS                 [-]            1                 <integer>         Number of multilevel substructures
+gDM_LOGCDELTA_STDDEV                    [-]            0                 <float>           log-std. deviation of subhalo scattering
+gDM_KMAX                                [h/Mpc]        -1                <float>           k_max/h of power spectrum (-1=value from file)
+gEXTRAGAL_FLAG_MASSFUNCTION             [-]            kTINKER08         <string>          Mass function of extragalactic halos
+gEXTRAGAL_HMF_SMALLSCALE_DPDM_SLOPE     [-]            -1                <float>           Force HMF slope steeper than value (>0, -1=off)
+gEXTRAGAL_FLAG_PROFILE                  [-]            kEINASTO          <string>          Dark Matter halo density profile
+gDM_IS_IDM                              [-]            0                 <boolean (0/1)>   Interacting DM HMF cut-off from  Moline (2016)
+gEXTRAGAL_FLAG_CDELTAMDELTA             [-]            kSANCHEZ14_200    <string>          Mass-concentration model of cosmic DM halos
+gCOSMO_DELTA0                           [-]            200               <float>           Overdensity factor at z=0;-1 for kBRYANNORMAN98
+gCOSMO_FLAG_DELTA_REF                   [-]            kRHO_CRIT         <string>          Reference density of the overdensity factor
+gPP_BR                                  [-]            0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,    <comma-sep list>  Branching channel ratio
+gEXTRAGAL_FLAG_ABSORPTIONPROFILE        [-]            kFRANCESCHINI08   <string>          EBL absorption profile
+
+
+# Variable name                         Unit           Standard Value    (Format)          (Comment)
+
+gDM_SUBS_MMIN                           [Msol]         1e-06             <float>           Smallest subclump mass
+gDM_SUBS_MMAXFRAC                       [-]            0.01              <float>           Biggest subclump mass, fraction of host mass
+gEXTRAGAL_SUBS_DPDV_FLAG_PROFILE        [-]            kEINASTO          <string>          dP/dV profile of subhalo distribution in host
+gEXTRAGAL_SUBS_DPDV_RSCALE_TO_RS_HOST   [-]            10                <float>           Scale radius of dP/dV profile to r_s of host
+gEXTRAGAL_SUBS_DPDM_SLOPE               [-]            1.9               <float>           Slope of power-law subhalo mass spectrum dP/dM
+gEXTRAGAL_SUBS_FLAG_CDELTAMDELTA        [-]            kSANCHEZ14_200    <string>          Mass-concentration model of subclumps
+gEXTRAGAL_SUBS_MASSFRACTION             [-]            0.2               <float>           Fraction of host halo mass bound in subhalos
+gEXTRAGAL_SHAPE_PARAMS_0                [-]            0.17              <float>           Shape parameter 1 of cosmic DM halo profile
+
+
+gEXTRAGAL_SUBS_DPDV_SHAPE_PARAMS_0      [-]            0.68              <float or kHOST>  Shape parameter 1 of dP/dV distrib. profile
+
