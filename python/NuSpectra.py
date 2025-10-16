@@ -62,9 +62,9 @@ def ExtractPPPC4(mass, channel, process='ann'):
         nu_tau = dict()
         for tmp_channel in ["nuenue", "numunumu", "nutaunutau"]:
             channel_pos = EW_list.index(tmp_channel)
-            nu_e[tmp_channel] = open_PPPC4tables("{}/resources/PPPC4_table/AtProduction_neutrinos_e.dat".format(curdir), channel_pos, mass, process=process)
-            nu_mu[tmp_channel] = open_PPPC4tables("{}/resources/PPPC4_table/AtProduction_neutrinos_mu.dat".format(curdir), channel_pos, mass, process=process)
-            nu_tau[tmp_channel] = open_PPPC4tables("{}/resources/PPPC4_table/AtProduction_neutrinos_tau.dat".format(curdir), channel_pos, mass, process=process)
+            nu_e[tmp_channel] = open_PPPC4tables("{}/../resources/PPPC4_table/AtProduction_neutrinos_e.dat".format(curdir), channel_pos, mass, process=process)
+            nu_mu[tmp_channel] = open_PPPC4tables("{}/../resources/PPPC4_table/AtProduction_neutrinos_mu.dat".format(curdir), channel_pos, mass, process=process)
+            nu_tau[tmp_channel] = open_PPPC4tables("{}/../resources/PPPC4_table/AtProduction_neutrinos_tau.dat".format(curdir), channel_pos, mass, process=process)
 
         PPPC4_values['nu_e']["dNdE"] = sum(nu_e[ch]['dNdE'] for ch in ["nuenue", "numunumu", "nutaunutau"])/3.
         PPPC4_values['nu_e']["E"] = nu_e["nuenue"]["E"]
@@ -75,9 +75,9 @@ def ExtractPPPC4(mass, channel, process='ann'):
 
     else:
         channel_pos = EW_list.index(channel)
-        PPPC4_values['nu_e'] = open_PPPC4tables("{}/resources/PPPC4_table/AtProduction_neutrinos_e.dat".format(curdir), channel_pos, mass, process=process)
-        PPPC4_values['nu_mu'] = open_PPPC4tables("{}/resources/PPPC4_table/AtProduction_neutrinos_mu.dat".format(curdir), channel_pos, mass, process=process)
-        PPPC4_values['nu_tau'] = open_PPPC4tables("{}/resources/PPPC4_table/AtProduction_neutrinos_tau.dat".format(curdir), channel_pos, mass, process=process)
+        PPPC4_values['nu_e'] = open_PPPC4tables("{}/../resources/PPPC4_table/AtProduction_neutrinos_e.dat".format(curdir), channel_pos, mass, process=process)
+        PPPC4_values['nu_mu'] = open_PPPC4tables("{}/../resources/PPPC4_table/AtProduction_neutrinos_mu.dat".format(curdir), channel_pos, mass, process=process)
+        PPPC4_values['nu_tau'] = open_PPPC4tables("{}/../resources/PPPC4_table/AtProduction_neutrinos_tau.dat".format(curdir), channel_pos, mass, process=process)
 
     return PPPC4_values
 

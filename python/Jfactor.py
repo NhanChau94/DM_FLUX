@@ -32,7 +32,7 @@ def Jfactor_Clumpy(profile, process):
         nametag='Dfactor_dDdOmega_GeV_cm2_sr'
         col=3
     
-    clumpyfile = f"{curdir}/resources/Clumpy_precomp/Jfactor//{nametag}_{profile}_NestiSalucci.output"
+    clumpyfile = f"{curdir}/../resources/Clumpy_precomp/Jfactor//{nametag}_{profile}_NestiSalucci.output"
     psi_values, Jpsi_values = extract_values(clumpyfile, 0, col)
 
     JPsi_dict = dict()
